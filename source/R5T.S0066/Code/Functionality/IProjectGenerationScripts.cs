@@ -12,6 +12,38 @@ namespace R5T.S0066
     [FunctionalityMarker]
     public partial interface IProjectGenerationScripts : IFunctionalityMarker
     {
+        public async Task Create_BlazorClientProject()
+        {
+            /// Inputs.
+            var projectName = Instances.Values.Sample_ProjectName;
+            var projectDescription = Instances.Values.Sample_ProjectDescription;
+            var solutionDirectoryPath = Instances.Paths.Sample_SolutionDirectoryPath;
+            var repositoryUrl = new IsSet<IRepositoryUrl>();
+
+
+            /// Run.
+            var (humanOutputTextFilePath, logFilePath) = await Instances.ApplicationContextOperator.In_ApplicationContext_Undated(
+                Instances.Values.ApplicationName,
+                ApplicationContextOperation);
+
+            async Task ApplicationContextOperation(IApplicationContext applicationContext)
+            {
+                await Instances.ProjectContextOperator.In_ProjectContext(
+                    projectName,
+                    solutionDirectoryPath,
+                    applicationContext.TextOutput,
+                    Instances.ProjectContextOperations.Create_BlazorClient(
+                        projectDescription,
+                        repositoryUrl,
+                        Instances.ProjectFilePathHandlers.Default
+                    )
+                );
+            }
+
+            Instances.WindowsExplorerOperator.OpenDirectoryInExplorer(
+                solutionDirectoryPath.Value);
+        }
+
         public async Task Create_WebServerForBlazorClientProject()
         {
             /// Inputs.

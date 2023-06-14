@@ -10,7 +10,8 @@ namespace R5T.S0066
         {
             //await ProjectGenerationScripts.Instance.Create_LibraryProject();
             //await ProjectGenerationScripts.Instance.Create_ConsoleProject();
-            await ProjectGenerationScripts.Instance.Create_WebServerForBlazorClientProject();
+            //await ProjectGenerationScripts.Instance.Create_WebServerForBlazorClientProject();
+            await ProjectGenerationScripts.Instance.Create_BlazorClientProject();
 
             //await ProjectScripts.Instance.AddProjectReferences();
         }
