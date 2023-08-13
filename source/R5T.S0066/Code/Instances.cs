@@ -15,6 +15,7 @@ namespace R5T.S0066
         public static IProjectFilePathHandlers ProjectFilePathHandlers => S0066.ProjectFilePathHandlers.Instance;
         public static Z0045.Raw.IProjectFileReferences ProjectFileReferences_Raw => Z0045.Raw.ProjectFileReferences.Instance;
         public static IProjectOperations ProjectOperations => S0066.ProjectOperations.Instance;
+        public static O0011.O001.ISampleProjectOperations SampleProjectOperations => O0011.O001.SampleProjectOperations.Instance;
         public static IValues Values => S0066.Values.Instance;
         public static F0088.IVisualStudioOperator VisualStudioOperator => F0088.VisualStudioOperator.Instance;
         public static F0034.IWindowsExplorerOperator WindowsExplorerOperator => F0034.WindowsExplorerOperator.Instance;

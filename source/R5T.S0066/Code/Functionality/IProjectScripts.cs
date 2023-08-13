@@ -25,7 +25,7 @@ namespace R5T.S0066
 
             async Task ApplicationContextOperation(IApplicationContext applicationContext)
             {
-                await Instances.ProjectOperations.In_New_SampleProjectContext(
+                await Instances.SampleProjectOperations.In_New_SampleProjectContext(
                     applicationContext.TextOutput,
                     async projectContext =>
                     {

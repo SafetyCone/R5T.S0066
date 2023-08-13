@@ -68,7 +68,7 @@ namespace R5T.S0066
                     Instances.ProjectContextOperations.Create_WebServerForBlazorClient(
                         projectDescription,
                         repositoryUrl,
-                        clientProjectFilePath,
+                        () => clientProjectFilePath,
                         Instances.ProjectFilePathHandlers.Default
                     )
                 );
