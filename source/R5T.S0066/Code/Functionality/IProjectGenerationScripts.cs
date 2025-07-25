@@ -40,7 +40,7 @@ namespace R5T.S0066
                 );
             }
 
-            Instances.WindowsExplorerOperator.OpenDirectoryInExplorer(
+            Instances.WindowsExplorerOperator.Open(
                 solutionDirectoryPath.Value);
         }
 
@@ -74,7 +74,7 @@ namespace R5T.S0066
                 );
             }
 
-            Instances.WindowsExplorerOperator.OpenDirectoryInExplorer(
+            Instances.WindowsExplorerOperator.Open(
                 solutionDirectoryPath.Value);
         }
 
@@ -106,7 +106,7 @@ namespace R5T.S0066
                 );
             }
 
-            Instances.WindowsExplorerOperator.OpenDirectoryInExplorer(
+            Instances.WindowsExplorerOperator.Open(
                 solutionDirectoryPath.Value);
         }
 
@@ -138,7 +138,7 @@ namespace R5T.S0066
                 );
             }
 
-            Instances.WindowsExplorerOperator.OpenDirectoryInExplorer(
+            Instances.WindowsExplorerOperator.Open(
                 solutionDirectoryPath.Value);
         }
     }
